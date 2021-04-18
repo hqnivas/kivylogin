@@ -1,0 +1,47 @@
+MDScreen :
+    md_bg_color : [12/255,24/255,33/255,1]
+    MDCard :
+        size_hint : None,None
+        size : 320,400
+        pos_hint : {"center_x":.5,"center_y":.5}
+        elevation : 15
+        md_bg_color : [26/255,52/255,70/255,1]
+        padding : 20
+        spacing : 30
+        radius: [20, 20, 20, 20 ]
+        orientation : "vertical"
+        # Adding items to the card
+        MDLabel :
+            text : 'HUGO APP'
+            font_style : 'Button'
+            font_size : 45
+            text_color: [0,0,0,1]
+            halign : "center"
+            size_hint_y : None
+            height : self.texture_size[1]
+            padding_y : 15
+        MDTextFieldRound :
+            hint_text : "usuario"
+            icon_right : "account"
+            size_hint_x : None
+            width : 220
+            font_size : 20
+            pos_hint : {"center_x":.5}
+            icon_right_color: app.theme_cls.primary_color
+            color_active : [1,1,1,1]
+        MDTextFieldRound :
+            hint_text : "clave"
+            icon_right : "eye-off"
+            size_hint_x : None
+            width : 220
+            font_size : 20
+            pos_hint : {"center_x":.5}
+            color_active : [1,1,1,1]
+            password : True
+        MDRoundFlatButton :
+            text : 'Ingresar'
+            pos_hint : {"center_x":.5}
+            font_size : 15
+        Widget :
+            size_hint_y : None
+            height : 30
